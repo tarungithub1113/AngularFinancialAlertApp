@@ -1,0 +1,10 @@
+<div>
+  <h1 class="name"> Hi {{ user.name }} </h1>
+  <h2 class="designation">{{ user.designation }}</h2>
+  <button *ngIf = "isCollapsed" (click)="toggleCollapse()">Expand</button>
+  <button *ngIf = "!isCollapsed" (click)="toggleCollapse()">Collapse</button>
+  <div *ngIf = "!isCollapsed">
+    <h2 class= "address">{{user.address}}</h2>
+   <h2 class="phone">{{user.phone}}</h2>
+  </div>
+</div>
